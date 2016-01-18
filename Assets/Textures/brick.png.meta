@@ -1,0 +1,243 @@
+fileFormatVersion: 2
+guid: 1433f17716a338443b7ab02429b529f3
+timeCreated: 1452446070
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: brick_0
+    21300002: brick_1
+    21300004: brick_2
+    21300006: brick_3
+    21300008: brick_4
+    21300010: brick_5
+    21300012: brick_6
+    21300014: brick_7
+    21300016: brick_8
+    21300018: brick_9
+    21300020: brick_10
+    21300022: brick_11
+    21300024: brick_12
+    21300026: brick_13
+    21300028: brick_14
+    21300030: brick_15
+    21300032: brick_16
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 1
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 0
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 5
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: brick_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 115
+        width: 24
+        height: 29
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: brick_1
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 115
+        width: 24
+        height: 29
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: brick_2
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 115
+        width: 24
+        height: 29
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: brick_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 91
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: brick_4
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 91
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: brick_5
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 91
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: brick_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 67
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: brick_7
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 67
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: brick_8
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 67
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: brick_9
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 40
+        width: 21
+        height: 9
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: brick_10
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 40
+        width: 24
+        height: 9
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: brick_11
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 40
+        width: 22
+        height: 9
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: brick_12
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 23
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: brick_13
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 123
+        width: 9
+        height: 19
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: brick_14
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 123
+        width: 9
+        height: 19
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: brick_15
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 23
+        width: 8
+        height: 25
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: brick_16
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 23
+        width: 8
+        height: 25
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
