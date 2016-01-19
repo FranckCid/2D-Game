@@ -78,8 +78,8 @@ public class PlayerBehaviour : CharacterBase {
 			if (Input.GetKey (KeyCode.LeftArrow)) {
 				anim.SetBool ("isDefending", true);
 				isDefending = true;
-			} else if (Input.GetKeyDown (KeyCode.UpArrow) && anim.GetBool ("isGrounded") && !anim.GetBool ("isCrouching")) {
-				rig.AddForce (new Vector2 (0, 160.5f) * Time.deltaTime, ForceMode2D.Impulse);
+			} else if (Input.GetAxis ("Jump") > 0 && anim.GetBool ("isGrounded") && !anim.GetBool ("isCrouching")) {
+				rig.AddForce (new Vector2 (0, 80.5f) * Time.deltaTime, ForceMode2D.Impulse);
 				anim.SetBool ("isJumping", true);
 			} else if (Input.GetKey (KeyCode.RightArrow)/* && anim.GetBool("isAttacking") == false*/) {
 				if(counter > 0.4f){
@@ -225,12 +225,14 @@ public class PlayerBehaviour : CharacterBase {
 			if (Input.GetAxisRaw ("Vertical") != 0) {
 				transform.Translate (new Vector3 (0, Input.GetAxisRaw ("Vertical") * Time.deltaTime, 0));
 				rig.gravityScale = 0;
+				rig.mass = 100;
 			}
 		}
 	}
 
 	void OnTriggerExit2D(Collider2D col){
 		rig.gravityScale = 1;
+		rig.mass = 1;
 	}
 
 	public void SetActualMechanic(Mechanic m){

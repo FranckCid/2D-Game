@@ -18,9 +18,6 @@ public class ArrowBehaviour : MonoBehaviour {
 		alive = true;
 		thisCol = GetComponent<Collider2D> ();
 		this.transform.Rotate(new Vector3(0, 0, 360.0f - Vector3.Angle(this.transform.right, Vector2.left * 1)));
-		foreach(GameObject g in GameObject.FindGameObjectsWithTag("Enemy")){
-			Physics2D.IgnoreCollision(thisCol, g.GetComponent<Collider2D>(), true);
-		}
 	}
 	
 	void FixedUpdate(){
@@ -34,12 +31,15 @@ public class ArrowBehaviour : MonoBehaviour {
 	}
 
 	void OnCollisionEnter2D(Collision2D col){
-		alive = false;
-		Destroy (rig);
-		Destroy (thisCol);
-		if(col.gameObject.tag.Equals("Player")){
-			col.gameObject.GetComponent<PlayerBehaviour>().Damage(5);
-			Destroy(this.gameObject);
+		if (!col.gameObject.tag.Equals ("Enemy")) {
+			if(col.gameObject.tag.Equals("Player")){
+				col.gameObject.GetComponent<PlayerBehaviour>().Damage(5);
+				Destroy(this.gameObject);
+			}else{
+				Destroy (thisCol);
+				Destroy(rig);
+			}
+			alive = false;
 		}
 	}
 
