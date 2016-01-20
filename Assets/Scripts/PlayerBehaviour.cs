@@ -81,14 +81,12 @@ public class PlayerBehaviour : CharacterBase {
 			} else if (Input.GetAxis ("Jump") > 0 && anim.GetBool ("isGrounded") && !anim.GetBool ("isCrouching")) {
 				rig.AddForce (new Vector2 (0, 80.5f) * Time.deltaTime, ForceMode2D.Impulse);
 				anim.SetBool ("isJumping", true);
-			} else if (Input.GetKey (KeyCode.RightArrow)/* && anim.GetBool("isAttacking") == false*/) {
+			} else if (Input.GetAxis("Attack") != 0/* && anim.GetBool("isAttacking") == false*/) {
 				if(counter > 0.4f){
 					counter = 0;
 					this.Attack();
-				}else{
-					anim.SetBool ("isAttacking", false);
 				}
-			} else if (Input.GetKeyUp (KeyCode.RightArrow)) {
+			} else if (Input.GetAxis("Attack") == 0) {
 				canWalk = true;
 				anim.SetBool ("isAttacking", false);
 			} else if (Input.GetKey (KeyCode.S)) {
@@ -235,6 +233,8 @@ public class PlayerBehaviour : CharacterBase {
 		rig.mass = 1;
 	}
 
+	//GETTERS AND SETTERS--------------------------------------------------------
+
 	public void SetActualMechanic(Mechanic m){
 		if (m == Mechanic.NORMAL) {
 			rig.gravityScale = 1f;
@@ -248,8 +248,8 @@ public class PlayerBehaviour : CharacterBase {
 		return actualMechanic;
 	}
 
-	void OnGUI(){
-		GUILayout.Label(this.life.ToString());
+	public int GetActualLife(){
+		return this.life;
 	}
 
 }
