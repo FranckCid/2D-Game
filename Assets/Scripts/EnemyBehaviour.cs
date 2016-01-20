@@ -7,18 +7,21 @@ public class EnemyBehaviour : CharacterBase {
 	protected GameObject player;
 	[SerializeField]
 	protected Animator anim;
-
+	protected bool candoanything;
 	protected Rigidbody2D rig;
 	protected bool isAway;
 
 	void Awake(){
 		rig = GetComponent<Rigidbody2D> ();
 		player = GameObject.FindGameObjectWithTag ("Player");
+		candoanything = true;
 	}
 
 
 	void Update () {
-		Move ();
+		if(candoanything){
+			Move ();
+		}
 	}
 
 	protected float counter = 0;
@@ -38,8 +41,8 @@ public class EnemyBehaviour : CharacterBase {
 		if(dif.y < range*3 && dif.x < range*3 && dif.y > -range*3 && dif.x > -range*3){
 			
 			isAway = false;
-			
-			if (dif.y < range && dif.x < range && dif.y > -range && dif.x > -range) {
+			float multipliyer = 1.2f;
+			if (dif.y < range*multipliyer && dif.x < range*multipliyer && dif.y > -range*multipliyer && dif.x > -range*multipliyer) {
 				counter += Time.deltaTime;
 				if (counter > 2f) {
 					anim.SetBool ("isAttacking", true);
@@ -124,6 +127,13 @@ public class EnemyBehaviour : CharacterBase {
 			this.rig.AddForce (Vector3.left*2.5f, ForceMode2D.Impulse);
 		else
 			this.rig.AddForce (Vector3.left*q, ForceMode2D.Impulse);
+		candoanything = false;
+		StartCoroutine(Blink());
+	}
+
+	IEnumerator Blink() {
+		yield return new WaitForSeconds(.3f);
+		candoanything = true;
 	}
 
 }
