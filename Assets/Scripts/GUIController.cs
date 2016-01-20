@@ -20,14 +20,14 @@ public class GUIController : MonoBehaviour {
 	
 	// Update is called once per frame
 	private int aux;
-	void Update () {
+	void LateUpdate () {
 		playerLife = player.GetComponent<PlayerBehaviour> ().GetActualLife ();
 		if (aux != playerLife) {
 			this.ClearScreen();
 			int i=0;
 			for (i=0; i<playerLife;){
 				i+=5;
-				Vector3 where = Camera.main.ScreenToWorldPoint (new Vector3 (healthbarPosition.x + i, -Screen.height - healthbarPosition.y, 0.10f+i/10));
+				Vector3 where = Camera.main.ScreenToWorldPoint (new Vector3 (0 + i*1.5f, 0, 0.10f+i/10)) + new Vector3(healthbarPosition.x , healthbarPosition.y, 0);
 				GameObject hearth = Instantiate (healthPref, where, Quaternion.Euler (Vector3.zero)) as GameObject;
 				hearth.transform.parent = this.transform;
 				/*if(i-playerLife>=1){ //USE ME IF YOU WANT HALF HEARTHS

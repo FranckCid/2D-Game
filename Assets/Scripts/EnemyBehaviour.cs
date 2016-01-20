@@ -62,7 +62,7 @@ public class EnemyBehaviour : CharacterBase {
 					}
 					walkCount = 0;
 				}
-				counter = 0;
+				counter = 0;	
 			}
 		} else if(dif.y < range*4 && dif.x < range*4 && dif.y > -range*4 && dif.x > -range*4){
 			this.Away();
@@ -123,16 +123,13 @@ public class EnemyBehaviour : CharacterBase {
 	}
 
 	public override void Knockback(float q){
-		if (q <= 0)
-			this.rig.AddForce (Vector3.left*2.5f, ForceMode2D.Impulse);
-		else
-			this.rig.AddForce (Vector3.left*q, ForceMode2D.Impulse);
+		this.rig.velocity = Vector3.zero;
 		candoanything = false;
 		StartCoroutine(Blink());
 	}
 
 	IEnumerator Blink() {
-		yield return new WaitForSeconds(.3f);
+		yield return new WaitForSeconds(.1f);
 		candoanything = true;
 	}
 
